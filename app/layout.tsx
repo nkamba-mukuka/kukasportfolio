@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -20,14 +19,17 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${inter.className} bg-[#2A2A2A] text-[#E0E0E0]`}>
+            <body className={`${inter.className} bg-[#2A2A2A] text-[#E0E0E0] flex flex-col min-h-screen`}>
                 <Header />
-                <main className="min-h-screen p-8">
+                <main className="flex-grow p-8 justify-center items-center ">
                     {children}
                 </main>
                 <Footer />
             </body>
         </html>
     )
+
+
+
 }
 
